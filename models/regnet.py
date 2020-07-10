@@ -107,7 +107,7 @@ class RegNet(nn.Module):
         return out
 
 
-def RegNetX_200MF():
+def RegNetX_200MF(nclasses=10):
     cfg = {
         'depths': [1, 1, 4, 7],
         'widths': [24, 56, 152, 368],
@@ -116,10 +116,10 @@ def RegNetX_200MF():
         'bottleneck_ratio': 1,
         'se_ratio': 0,
     }
-    return RegNet(cfg)
+    return RegNet(cfg, nclasses)
 
 
-def RegNetX_400MF():
+def RegNetX_400MF(nclasses=10):
     cfg = {
         'depths': [1, 2, 7, 12],
         'widths': [32, 64, 160, 384],
@@ -128,10 +128,10 @@ def RegNetX_400MF():
         'bottleneck_ratio': 1,
         'se_ratio': 0,
     }
-    return RegNet(cfg)
+    return RegNet(cfg, nclasses)
 
 
-def RegNetY_400MF():
+def RegNetY_400MF(nclasses=10):
     cfg = {
         'depths': [1, 2, 7, 12],
         'widths': [32, 64, 160, 384],
@@ -140,7 +140,7 @@ def RegNetY_400MF():
         'bottleneck_ratio': 1,
         'se_ratio': 0.25,
     }
-    return RegNet(cfg)
+    return RegNet(cfg, nclasses)
 
 
 def test():

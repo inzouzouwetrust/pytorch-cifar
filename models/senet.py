@@ -109,8 +109,8 @@ class SENet(nn.Module):
         return out
 
 
-def SENet18():
-    return SENet(PreActBlock, [2,2,2,2])
+def SENet18(nclasses=10):
+    return SENet(PreActBlock, [2,2,2,2], num_classes=nclasses)
 
 
 def test():

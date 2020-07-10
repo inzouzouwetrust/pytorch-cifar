@@ -104,24 +104,24 @@ class ResNet(nn.Module):
         return out
 
 
-def ResNet18():
-    return ResNet(BasicBlock, [2, 2, 2, 2])
+def ResNet18(nclasses=10):
+    return ResNet(BasicBlock, [2, 2, 2, 2], nclasses)
 
 
-def ResNet34():
-    return ResNet(BasicBlock, [3, 4, 6, 3])
+def ResNet34(nclasses=10):
+    return ResNet(BasicBlock, [3, 4, 6, 3], nclasses)
 
 
-def ResNet50():
-    return ResNet(Bottleneck, [3, 4, 6, 3])
+def ResNet50(nclasses=10):
+    return ResNet(Bottleneck, [3, 4, 6, 3], nclasses)
 
 
-def ResNet101():
-    return ResNet(Bottleneck, [3, 4, 23, 3])
+def ResNet101(nclasses=10):
+    return ResNet(Bottleneck, [3, 4, 23, 3], nclasses)
 
 
-def ResNet152():
-    return ResNet(Bottleneck, [3, 8, 36, 3])
+def ResNet152(nclasses=10):
+    return ResNet(Bottleneck, [3, 8, 36, 3], nclasses)
 
 
 def test():
